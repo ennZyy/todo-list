@@ -10,6 +10,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('tasks');
     })->name('main');
 
-    Route::resource('tasks', TaskController::class)
-        ->middleware(['auth', 'verified']);
+    Route::resource('tasks', TaskController::class);
 });
